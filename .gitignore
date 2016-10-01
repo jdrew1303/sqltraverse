@@ -1,0 +1,18 @@
+# Emacs
+*~
+\#*\#
+
+# Node modules
+node_modules/
+
+test/
+
+# Cover
+.coverage_data/
+cover_html/
+coverage/
+
+npm-debug.log
+.vimrc.local
+
+.c9/
