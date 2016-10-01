@@ -167,6 +167,7 @@
       'result'      : ['values', 'module', 'expression'],
       'values'      : ['values'],
       'module'      : ['args'],
+      'where'       : ['expression'],
       'statement'   : ['result', 'from', 'where', 'limit', 'args', 'group', 'having', 'order', 'with', 'target', 'on', 'name', 'definition', 'into', 'set', 'condition']
     };
 
