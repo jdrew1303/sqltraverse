@@ -58,7 +58,7 @@
 
 [![jdrew1303](https://avatars0.githubusercontent.com/u/2535432?v=3&s=40)](https://twitter.com/intent/follow?screen_name=j_drew1303 "Follow @j_drew1303 on Twitter")
 
-Copyright (c) 2015
+Copyright (c) 2016
 
 ## Issues
 - Unit test currently not finished
