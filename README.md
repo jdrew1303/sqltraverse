@@ -1,81 +1,70 @@
-## Documentation
+<p align="center">
+  <a name="brand" href="#"><img src="./docs/sql_traverse_logo.png"></a>
+</p>
 
-### Installation
+<p align="center">
+  <b><a href="#overview">Overview</a></b>
+  |
+  <b><a href="#features">Features</a></b>
+  |
+  <b><a href="#installation">Installation</a></b>
+  |
+  <b><a href="#credits">Credits</a></b>
+  |
+  <b><a href="#issues">Issues</a></b>
+</p>
 
-This can be installed using NPM by using the option to [install from a url](https://docs.npmjs.com/files/package.json#urls-as-dependencies).
+<br>
 
-### Example Usage
+<p align="center">
 
-For a comprehensive example of usage please refer to the unit tests. These document all major usages of the API.
+[ ![ ]( https://img.shields.io/travis/jdrew1303/sqltraverse.svg?style=flat-square ) ](https://travis-ci.org/jdrew1303/sqltraverse)
+[ ![ ]( http://img.shields.io/badge/license-BSD%202%20Clause-blue.svg?style=flat-square ) ](./LICENSE)
+[ ![ ]( https://img.shields.io/badge/platform-Browser%20%7C%20Node.js-808080.svg?style=flat-square ) ]()
+[ ![ ]( https://img.shields.io/badge/documentation-below-green.svg?style=flat-square ) ](https://travis-ci.org/jdrew1303/sqltraverse)
 
-### Running tests
+</p>
 
-You will need to install all devDependencies of the repo by running `npm i` in the root of the repo.
 
-Once this is done you can run `npm run test` to have it run linting and the unit tests.
+## Overview
 
-!['running tests'](docs/soql_ast_walker.gif)
 
-### Issues
+<p align="right"><a href="#top">:arrow_up:</a></p>
 
-*__Notes on the traverser and issues with the parser__:*
-There are some issues with the current output from the SOQL parser that means that iteration isn't as smooth as would be expected.
+## Features
 
-- Because there is a top level `statement` with no type.
 
-  ``` javascript
-  {
-    "statement": []
-  }
-  ```
+<p align="right"><a href="#top">:arrow_up:</a></p>
 
-  We cannot have the traverser know how to handle it in a generic fashion. To get around this we must specify a `fallback : 'iteration'` option to the traverser.
+## Installation
 
-  ``` javascript
-  traverse(tree, {
-      enter(node) {
-          console.log(`enter -- ${node.type}`);
-          if (node.type === 'statement') {
-              expect(this.type()).to.be.equal('statement');
-          }
-      },
-      fallback: 'iteration' // we need this because the main node is not properly formed.
-  });
-  ```
-- `Order` and `List` types should have their own node type. This will be a major issue when using the traverser/walker as it will have to be known as an edge case by the developer and handled appropriately.
+### Environment Requirements
 
-- For expression should probably be contained in the `Limit` node
 
-- `group by` should probably have its own node type. (see `select-group-by-cube.sql`
-  and `select-group-by-cube.json` for an example of how hard it will be to generate
-  code from) args seems to be part of the select statement and not of the group
-  by cube.
 
-- - `group by rollup` has a different signature from cube. Cube should be changed
-  to rollup node type (see above).
+<p align="right"><a href="#top">:arrow_up:</a></p>
 
-### License
 
-Copyright (C) 2012-2016 [Yusuke Suzuki](http://github.com/Constellation)
- (twitter: [@Constellation](http://twitter.com/Constellation)) and other contributors.
+### Using this project
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
 
-  * Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
 
-  * Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in the
-    documentation and/or other materials provided with the distribution.
+<p align="right"><a href="#top">:arrow_up:</a></p>
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-ARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
-DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+### Deploy
+<p align="right"><a href="#top">:arrow_up:</a></p>
+
+
+## Credits
+
+
+[![jdrew1303](https://avatars0.githubusercontent.com/u/2535432?v=3&s=40)](https://twitter.com/intent/follow?screen_name=j_drew1303 "Follow @j_drew1303 on Twitter")
+
+Copyright (c) 2015
+
+## Issues
+- Unit test currently not finished
+- Documentation currently under construction
+- AST is currently in a state of flux
+
+<p align="right"><a href="#top">:arrow_up:</a></p>
