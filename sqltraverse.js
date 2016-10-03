@@ -155,10 +155,10 @@
       'condition'   : ['when', 'then', 'else'],
       'expression'  : ['left', 'right', 'start', 'expression', 'condition', 'target', 'event', 'action', 'offset', 'as'],
       'function'    : ['args'],
-      'identifier'  : [],           // has no child nodes
+      'identifier'  : ['columns'],
       'literal'     : [],           // has no child nodes
-      'constraint'  : ['expression', 'references'],
-      'on'          : ['columns'],
+      'constraint'  : ['expression', 'references', 'on'],
+      'on'          : ['columns', 'expression'],
       'definition'  : ['definition', 'datatype', 'columns'],
       'datatype'    : ['args'],
       'event'       : ['of'],
@@ -168,7 +168,11 @@
       'values'      : ['values'],
       'module'      : ['args'],
       'where'       : ['expression'],
-      'statement'   : ['result', 'from', 'where', 'limit', 'args', 'group', 'having', 'order', 'with', 'target', 'on', 'name', 'definition', 'into', 'set', 'condition']
+      'from'        : ['source', 'map'],
+      'map'         : ['map', 'join'],
+      'join'        : ['source', 'constraint'],
+      'compound'    : ['compound','statement'],
+      'statement'   : ['result', 'from', 'where', 'limit', 'args', 'group', 'having', 'order', 'with', 'target', 'on', 'name', 'definition', 'into', 'set', 'condition', 'compound', 'statement']
     };
 
     // unique id
