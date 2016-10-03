@@ -172,7 +172,7 @@
       'map'         : ['map', 'join'],
       'join'        : ['source', 'constraint'],
       'compound'    : ['compound','statement'],
-      'statement'   : ['result', 'from', 'where', 'limit', 'args', 'group', 'having', 'order', 'with', 'target', 'on', 'name', 'definition', 'into', 'set', 'condition', 'compound', 'statement']
+      'statement'   : ['result', 'from', 'where', 'limit', 'args', 'group', 'having', 'order', 'with', 'target', 'on', 'name', 'definition', 'into', 'set', 'condition', 'compound', 'statement', 'to']
     };
 
     // unique id
