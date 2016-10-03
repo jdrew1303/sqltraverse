@@ -48,12 +48,12 @@ The following code will do a simple walk of the AST passed to it. We can take ac
 ```javascript
 sqltraverse.traverse(ast, {
     enter: function (node, parent) {
-        if (node.type == 'FunctionExpression' || node.type == 'FunctionDeclaration')
+        if (node.type == 'statement' || node.type == 'assignment')
             return sqltraverse.VisitorOption.Skip;
     },
     leave: function (node, parent) {
-        if (node.type == 'VariableDeclarator')
-          console.log(node.id.name);
+        if (node.type == 'literal')
+          console.log(node.value);
     }
 });
 ```
@@ -74,7 +74,7 @@ And sqltraverse provides `sqltraverse.replace` function. When returning node fro
 result = sqltraverse.replace(tree, {
     enter: function (node) {
         // Replace it with replaced.
-        if (node.type === 'Literal')
+        if (node.type === 'literal')
             return replaced;
     }
 });
@@ -89,7 +89,7 @@ var tree = {
 
     // This 'argument' is the property containing the other **node**.
     argument: {
-        type: 'Literal',
+        type: 'literal',
         value: 20
     },
 
@@ -116,7 +116,7 @@ var tree = {
 
     // This 'argument' is the property containing the other **node**.
     argument: {
-        type: 'Literal',
+        type: 'literal',
         value: 20
     },
 
@@ -140,7 +140,7 @@ var tree = {
 
     // This 'argument' is the property containing the other **node**.
     argument: {
-        type: 'Literal',
+        type: 'literal',
         value: 20
     },
 
