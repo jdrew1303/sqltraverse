@@ -12,7 +12,8 @@ describe('Type', () => {
     return traverse(tree, {
         enter(node) {
           expect(this.type()).to.be.equal('statement');
-        }
+        },
+        fallback: 'iteration'
     });
   });
 
@@ -20,7 +21,8 @@ describe('Type', () => {
     return traverse(tree, {
         leave(node) {
           expect(this.type()).to.be.equal('statement');
-        }
+        },
+        fallback: 'iteration'
     });
   });
 });

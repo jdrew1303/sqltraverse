@@ -55,7 +55,8 @@ export default class Dumper {
             },
 
             keys,
-            fallback
+            // @TODO this needs to be reverted
+            fallback: 'iteration'
         });
 
         return dumper.result();

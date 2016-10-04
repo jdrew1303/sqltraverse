@@ -23,6 +23,7 @@
     "babel-register": "^6.3.13",
     "chai": "^2.1.1",
     "espree": "^1.11.0",
+    "estraverse": "^4.2.0",
     "gulp": "^3.8.10",
     "gulp-bump": "^0.2.2",
     "gulp-filter": "^2.0.0",
@@ -35,6 +36,7 @@
   "scripts": {
     "test": "npm run-script lint && npm run-script unit-test",
     "lint": "jshint sqltraverse.js",
-    "unit-test": "mocha --compilers js:babel-register"
+    "unit-test": "mocha --compilers js:babel-register",
+    "dev-ci" : "mocha --compilers js:babel-register --watch"
   }
 }
