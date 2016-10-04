@@ -11,18 +11,17 @@
     {
       "name": "James Drew",
       "email": "j.drew1303@gmail.com",
-      "web": "http://github.com/jdrew1303"
+      "web": "https://www.linkedin.com/in/jdrew1303"
     }
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/jdrew1303/sqltraverse.git"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "babel-register": "^6.3.13",
     "chai": "^2.1.1",
-    "espree": "^1.11.0",
     "estraverse": "^4.2.0",
     "gulp": "^3.8.10",
     "gulp-bump": "^0.2.2",
