@@ -1,9 +1,9 @@
 {
   "name": "sqltraverse",
   "description": "SQL AST traversal functions",
-  "homepage": "",
+  "homepage": "https://github.com/jdrew1303/sqltraverse",
   "main": "sqltraverse.js",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "engines": {
     "node": ">=0.10.0"
   },
