@@ -3,7 +3,7 @@
   "description": "SQL AST traversal functions",
   "homepage": "https://github.com/jdrew1303/sqltraverse",
   "main": "sqltraverse.js",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -18,7 +18,7 @@
     "type": "git",
     "url": "https://github.com/jdrew1303/sqltraverse.git"
   },
-  "dependencies" : {
+  "dependencies": {
     "estraverse": "^4.2.0"
   },
   "devDependencies": {
@@ -38,6 +38,6 @@
     "test": "npm run-script lint && npm run-script unit-test",
     "lint": "jshint sqltraverse.js",
     "unit-test": "mocha --compilers js:babel-register",
-    "dev-ci" : "mocha --compilers js:babel-register --watch"
+    "dev-ci": "mocha --compilers js:babel-register --watch"
   }
 }
